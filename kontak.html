@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Kontak - Keyra Printing</title>
+    <style>
+        /* Ubah URL gambar background di sini */
+        :root {
+            --bg-image: url('images/keyra.jpeg');
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--bg-image, #eef1f7);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #333;
+        }
+
+        header {
+            background: #2d3436;
+            padding: 22px 50px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            font-size: 26px;
+            letter-spacing: 1px;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        header nav a:hover {
+            color: #74b9ff;
+        }
+
+        .contact-section {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 25px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .contact-info {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(6px);
+            padding: 40px 35px;
+            border-radius: 18px;
+            width: 100%;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border: 1px solid rgba(255,255,255,0.45);
+            animation: fadeIn 0.5s ease;
+        }
+
+        .contact-info h2 {
+            font-size: 26px;
+            margin-bottom: 25px;
+            color: #2d3436;
+            text-align: center;
+        }
+
+        .info-item {
+            margin-bottom: 25px;
+            padding: 15px;
+            border-radius: 12px;
+            background: #f8f9fb;
+            border: 1px solid #e2e5ea;
+            transition: 0.3s;
+        }
+
+        .info-item:hover {
+            background: #ffffff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+        .info-item h4 {
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+
+        footer {
+            margin-top: 60px;
+            background: #2d3436;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            font-size: 14px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            .contact-info { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Keyra Printing</h1>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="produk.html">Produk</a>
+            <a href="#">Kontak</a>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-info">
+            <h2>Informasi Kontak</h2>
+
+            <div class="info-item">
+                <h4>📍 Alamat</h4>
+                <p></p>9RPG+5QQ, Jl. Sultan Syarif Harun, Pangkalan Kerinci Bar., Kec. Pangkalan Kerinci, Kabupaten Pelalawan, Riau 28654
+            </div>
+
+            <div class="info-item">
+                <h4>📞 Telepon</h4>
+                <p>+62 823-7229-4040</p>
+                <a href="https://wa.me/6282372294040" target="_blank" style="
+                    display:inline-block;
+                    margin-top:10px;
+                    background:#25D366;
+                    color:white;
+                    padding:10px 16px;
+                    border-radius:8px;
+                    text-decoration:none;
+                    font-weight:600;">
+                    Chat via WhatsApp
+                </a>
+            </div>
+
+            <div class="info-item">
+                <h4>📧 Email</h4>
+                <p>keyraprinting@gmail.com</p>
+                
+            </div>
+
+            <div class="info-item">
+                <h4>🕒 Jam Operasional</h4>
+                <p>Setiap Hari : 09.00 - 21.00</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Keyra Printing. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

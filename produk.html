@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyra Printing - Ecommerce & Landing Page</title>
+    <!-- FONT AWESOME ICON -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            background: url('images/keyra.jpeg') no-repeat center center/cover;
+            color: #fff;
+            position: relative;
+        }
+
+        body::after{
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: -1;
+        }
+
+        /* NAVBAR */
+        .navbar{
+            width: 100%;
+            padding: 18px 60px;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(6px);
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo{
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        .nav-links{
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links li a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .nav-links li a:hover{
+            color: #00eaff;
+        }
+
+        /* HERO */
+        .hero{
+            height: 100vh;
+            background: url('images/printing-bg.jpg') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 50px;
+            margin-top: 70px;
+            position: relative;
+        }
+
+        .hero::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+        }
+
+        .hero > div{
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1{
+            font-size: 56px;
+            color: white;
+            text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero p{
+            margin: 20px 0;
+            font-size: 20px;
+            color: #eee;
+        }
+
+        .hero a{
+            display: inline-block;
+            padding: 12px 30px;
+            background: #00eaff;
+            color: #000;
+            text-decoration: none;
+            border-radius: 40px;
+            margin-top: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .hero a:hover{
+            background: white;
+        }
+
+        /* PRODUK */
+        .section-title{
+            text-align: center;
+            font-size: 35px;
+            margin: 90px 0 40px;
+            color: #fff;
+        }
+
+        .produk-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            width: 90%;
+            margin: auto;
+        }
+
+        .produk{
+            background: rgba(255,255,255,0.12);
+            padding: 18px;
+            border-radius: 18px;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            text-align: center;
+            color: #fff;
+            transition: 0.3s ease;
+        }
+
+        .produk:hover{
+            transform: translateY(-5px);
+        }
+
+        .produk img{
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .produk h3{
+            margin: 15px 0 10px;
+            font-size: 20px;
+        }
+
+        .btn-buy{
+            display: inline-block;
+            margin-top: 12px;
+            padding: 10px 20px;
+            background: #00eaff;
+            color: #000;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .btn-buy:hover{
+            background: white;
+        }
+
+        /* ABOUT */
+        .about{
+            padding: 80px 10%;
+            background: rgba(0,0,0,0.85);
+            color: #fff;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 80px;
+        }
+
+        .about img{
+            width: 45%;
+            min-width: 280px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+        }
+
+        .about-text{
+            flex: 1;
+        }
+
+        .about-text h2{
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        /* MAPS */
+        .maps-section {
+            width: 90%;
+            margin: 70px auto;
+            text-align: center;
+            color: white;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 350px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-top: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* FOOTER */
+        footer{
+            padding: 20px;
+            background: #000;
+            color: white;
+            text-align: center;
+            margin-top: 60px;
+        }
+        /* SOCIAL FOOTER ICONS - MIRIP DIRECTIVE */
+/* SOCIAL FOOTER ICONS – LIGHT & CLEAN */
+.social-footer {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.social-footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    margin-bottom: 18px;
+}
+
+.social-footer ul li {
+    display: inline-block;
+}
+
+.social-footer ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.9); /* lebih terang */
+    color: white;
+    font-size: 22px;
+    transition: 0.3s;
+    text-decoration: none;
+
+    /* tambah efek glowing */
+    box-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+
+.social-footer ul li a:hover {
+    border-color: #00eaff;
+    color: #00eaff;
+    box-shadow: 0 0 12px #00eaff;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Keyra Printing</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#produk">Produk</a></li>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div>
+            <h1>Cetak Desain Berkualitas untuk Bisnismu</h1>
+            <p>Melayani printing stiker, banner, kaos, kartu nama, neon box, dan banyak lagi.</p>
+            <a href="#produk">Lihat Produk</a>
+        </div>
+    </section>
+
+    <!-- GOOGLE MAPS -->
+    <section id="maps" class="maps-section">
+        <h2>Lokasi Kami</h2>
+        <p>Kunjungi toko kami melalui peta berikut:</p>
+
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7280334017496!2d101.82698719999999!3d0.3854555999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5c55cb4e78081%3A0xfb7e8c9468eca654!2sKeyra%20Printing!5e0!3m2!1sid!2sid!4v1763169942340!5m2!1sid!2sid"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- PRODUK -->
+    <h2 class="section-title" id="produk">Produk Kami</h2>
+
+    <div class="produk-container">
+
+        <div class="produk">
+            <img src="images/spandukpapanbunga.jpeg" alt="Papan Bunga">
+            <h3>Spanduk Papan Bunga</h3>
+            <a href="kontak.html" class="btn-buy">Pesan</a>
+        </div>
+
+        <div class="produk">
+            <img src="images/banner.jpeg" alt="Banner">
+            <h3>Banner / Spanduk</h3>
+            <a href="kontak.html" class="btn-buy">Pesan</a>
+        </div>
+
+        <div class="produk">
+            <img src="images/jersey.jpeg" alt="Kaos">
+            <h3>Kaos Sablon</h3>
+            <a href="kontak.html" class="btn-buy">Pesan</a>
+        </div>
+
+        <div class="produk">
+            <img src="images/idcard.jpeg" alt="Kartu Nama">
+            <h3>ID Card</h3>
+            <a href="kontak.html" class="btn-buy">Pesan</a>
+        </div>
+
+        <div class="produk">
+            <img src="images/neon.jpeg" alt="Neon Box">
+            <h3>Neon BOX</h3>
+            <a href="kontak.html" class="btn-buy">Pesan</a>
+        </div>
+
+        <div class="produk">
+            <img src="images/servis.jpeg" alt="Servis Laptop">
+            <h3>Servis Laptop</h3>
+            <a href="kontak.html" class="btn-buy">Pesan</a>
+        </div>
+
+        <div class="produk">
+            <img src="images/stiker.jpeg" alt="Servis Laptop">
+            <h3>Stiker</h3>
+            <a href="kontak.html" class="btn-buy">Pesan</a>
+        </div>
+
+        <div class="produk">
+            <img src="images/oneway.jpeg" alt="Servis Laptop">
+            <h3>Oneway</h3>
+            <a href="kontak.html" class="btn-buy">Pesan</a>
+        </div>
+
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about" id="tentang">
+        <div class="about-text">
+            <h2>Tentang Kami</h2>
+            <p>
+                Keyra Printing adalah layanan percetakan profesional yang menyediakan berbagai kebutuhan printing
+                seperti banner, stiker, kaos sablon, kartu nama, neon box, hingga jasa servis laptop. 
+                Kami mengutamakan kualitas, kecepatan, dan hasil terbaik untuk pelanggan.
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+    <div class="social-footer">
+        <ul>
+            <li><a href="https://www.facebook.com/people/Keyra-Printing-Pkc/pfbid0KgbNnRMUpQE4QkGRuJtqRjTbDRFe68RA4kBMG8PAae2fy7ctS3RK82WMiX5FNWjEl/"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/keyraprinting/"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.tiktok.com/@keyra.printing"><i class="fab fa-tiktok"></i></a></li>
+        </ul>
+    </div>
+
+    © 2025 Keyra Printing — All Rights Reserved
+</footer>
+
+
+</body>
+</html>

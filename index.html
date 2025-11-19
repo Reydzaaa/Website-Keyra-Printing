@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyra Printing</title>
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 999;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+        }
+
+        .navbar .logo {
+            color: #fff;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links li a:hover {
+            color: #00eaff;
+        }
+
+        /* CONTAINER */
+        .container {
+            width: 100%;
+            height: 100vh;
+            margin-top: 80px; /* supaya tidak ketutup navbar */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* VIDEO BACKGROUND */
+        .background-clip {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* CONTENT */
+        .content {
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        .content h1 {
+            font-size: 65px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+
+        .content a {
+            font-size: 20px;
+            text-decoration: none;
+            color: #fff;
+            padding: 12px 30px;
+            border: 2px solid #fff;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        .content a:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .content h1 {
+                font-size: 40px;
+            }
+
+            .navbar {
+                padding: 15px 25px;
+            }
+
+            .nav-links {
+                gap: 20px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Keyra Printing</div>
+        <ul class="nav-links">
+            <li><a href="produk.html">Produk</a></li>
+            <li><a href="produk.html">Tentang</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN SECTION -->
+    <div class="container">
+        <video autoplay loop muted playsinline class="background-clip">
+            <source src="images/keyra111.mp4" type="video/mp4">
+        </video>
+
+        <div class="content">
+            <h1>Selamat Datang di Website Keyra Printing</h1>
+            <a href="produk.html">Lihat Produk</a>
+        </div>
+    </div>
+
+</body>
+</html>
